@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#faf8ef"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e0ba01"
+            android:padding="5dp"
+            android:text="2048"
+            android:textColor="#fefdf9"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="#bbada0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="　　最高分数　　"
+                android:textColor="#eee4da"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/bestScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/historyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/layout2"
+            android:layout_below="@id/layout2"
+            android:background="#8f7a66"
+            android:minHeight="0dp"
+            android:padding="3dp"
+            android:text="　　历史成绩　　"
+            android:textColor="#f9f6f2"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/layout2"
+            android:background="#bbada0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="　　当前分数　　"
+                android:textColor="#eee4da"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/restartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/layout1"
+            android:layout_below="@id/layout1"
+            android:background="#8f7a66"
+            android:minHeight="0dp"
+            android:padding="3dp"
+            android:text="　　重新开始　　"
+            android:textColor="#f9f6f2"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <com.hch.game2048.Game2048Layout
+        android:id="@+id/game2048Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bbada0"
+        android:padding="10dp" >
+    </com.hch.game2048.Game2048Layout>
+
+</LinearLayout>
